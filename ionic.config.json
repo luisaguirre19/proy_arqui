@@ -1,0 +1,7 @@
+{
+  "name": "block_umg",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

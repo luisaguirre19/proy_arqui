@@ -1,0 +1,6 @@
+{
+	"appId": "app.block_umg.start",
+	"appName": "block_umg",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

@@ -1,0 +1,61 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Cripto San Juan Sac.
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+ 
+    <ion-item>
+      <ion-button (click)="conectar()" expand="block" fill="clear" shape="round">
+        {{estado}}
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Clave publica</ion-label>
+      <ion-input [(ngModel)]="PUBLICA" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Clave privada</ion-label>
+      <ion-input [(ngModel)]="PRIVADA" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Destino</ion-label>
+      <ion-input [(ngModel)]="DESTINO" ></ion-input>
+      <ion-button (click)="scanear()">
+        <ion-icon slot="icon-only" name="qr-code-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cantidad</ion-label>
+      <ion-input [(ngModel)]="CANTIDAD" type="number"></ion-input>
+    </ion-item>
+    <ion-button color="secondary" (click)="enviar()" expand="block" fill="solid">
+      Enviar
+      <ion-icon slot="end" name="cash-outline"></ion-icon>
+    </ion-button>
+    <ion-button color="medium" (click)="crear_claves()" expand="block" fill="solid" >
+      Crear claves
+      <ion-icon slot="end" name="key-outline"></ion-icon>
+    </ion-button>
+    <ion-item>
+      <ion-button color="warning" (click)="ver()" expand="block" fill="solid" >
+        Ver mi monedero
+        <ion-icon slot="end" name="wallet-outline"></ion-icon>
+      </ion-button>
+      <ion-button color="success" (click)="abonar()" expand="block" fill="solid" >
+        Abonar a mi monedero
+        <ion-icon slot="end" name="server-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-title *ngIf = 'descripcion' >{{descripcion}}</ion-title>
+ 
+</ion-content>
+<ion-fab-button color="warning" (click)="limpiar()">
+  <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+</ion-fab-button>
